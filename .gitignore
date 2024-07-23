@@ -1,0 +1,14 @@
+# created by virtualenv automatically
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+
+# created by virtualenv automatically
+.idea/
+.DS_Store
+.venv/
