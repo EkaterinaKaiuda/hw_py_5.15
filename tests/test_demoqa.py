@@ -14,7 +14,7 @@ def test_complete_todo():
 
     browser.element('//label[@for="gender-radio-2"]').click()
 
-    browser.element('#userNumber').type('150567834')
+    browser.element('#userNumber').type('1505678349')
 
     browser.element('#dateOfBirthInput').click()
     browser.element('//*[@class="react-datepicker__year-select"]').click().element('[value = "1987"]').click()
@@ -31,14 +31,14 @@ def test_complete_todo():
     browser.element('#currentAddress').type('Ryabinovaya st. 13')
     browser.element("#react-select-3-input").type('Haryana').press_enter()
     browser.element('#react-select-4-input').type('Karnal').press_enter()
-    browser.element('#submit').click()
+    browser.element('//*[@id="submit"]').click()
 
     browser.element('.modal-content').element('table').all('tr').all('td').even.should(
         have.exact_texts(
             "Ekaterina Volf",
             "volfe@gmail.com",
             "Female",
-            "150567834",
+            "1505678349",
             "16 April,1987",
             "Biology",
             "Reading",
