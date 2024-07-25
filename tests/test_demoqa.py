@@ -4,7 +4,6 @@ from selene import browser, have
 
 
 def test_complete_todo():
-
     browser.open('/automation-practice-form')
 
     browser.element('#firstName').type('Ekaterina')
@@ -19,7 +18,7 @@ def test_complete_todo():
     browser.element('#dateOfBirthInput').click()
     browser.element('//*[@class="react-datepicker__year-select"]').click().element('[value = "1987"]').click()
     browser.all('.react-datepicker__month-select>option').element_by(have.exact_text("April")).click()
-    #//*[@class='react-datepicker__month-select']/option не сработал, не понятно почему
+    # //*[@class='react-datepicker__month-select']/option не сработал, не понятно почему
     browser.element('.react-datepicker__day.react-datepicker__day--016').click()
 
     browser.element('#subjectsInput').type('Biology').press_tab()
